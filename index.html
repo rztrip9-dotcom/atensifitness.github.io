@@ -1,0 +1,1317 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atensi Fitness Center - Bentuk Badanmu Sesuai Impianmu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #fcfbfb;
+            background-color: #080808;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #ff6b35;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666666;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ff6b35;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f50303 0%, #2d2d2d 100%);
+            color: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero .accent {
+            color: #ff6b35;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ddd;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #ff5a1f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255,107,53,0.3);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            border: 2px solid #ff6b35;
+            color: #ff6b35;
+            margin-left: 1rem;
+        }
+
+        .cta-button-secondary:hover {
+            background: #ff6b35;
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #ff6b35;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, #fff 0%, #f9f9f9 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid #ddd;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .pricing-card:hover {
+            border-left-color: #ff6b35;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateX(5px);
+        }
+
+        .pricing-card.featured {
+            border-left-color: #ff6b35;
+            background: linear-gradient(135deg, #fff5f1 0%, #fff 100%);
+            box-shadow: 0 8px 24px rgba(255,107,53,0.15);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: #ff6b35;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pricing-info {
+            flex: 1;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .price-period {
+            color: #999;
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-top: 0.8rem;
+            text-align: left;
+            display: none;
+        }
+
+        .pricing-card:hover .pricing-features {
+            display: block;
+        }
+
+        .pricing-features li {
+            padding: 0.3rem 0;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .pricing-features li:before {
+            content: "• ";
+            color: #ff6b35;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: #ff6b35;
+            font-weight: 700;
+            min-width: 120px;
+            text-align: right;
+        }
+
+        .pricing-button {
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .pricing-button.primary {
+            background: #ff6b35;
+            color: white;
+        }
+
+        .pricing-button.primary:hover {
+            background: #ff5a1f;
+            transform: translateY(-2px);
+        }
+
+        .pricing-button.secondary {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .pricing-button.secondary:hover {
+            background: #ff6b35;
+            color: white;
+            border-color: #ff6b35;
+        }
+
+        /* Why Us Section */
+        .why-us {
+            padding: 5rem 2rem;
+            background: #fff;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .why-us-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+        }
+
+        .why-us-list {
+            list-style: none;
+        }
+
+        .why-us-list li {
+            padding: 1rem 0;
+            font-size: 1.05rem;
+            color: #555;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+
+        .why-us-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .why-us-image {
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #ff6b35;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p, .footer-section li {
+            color: #bbb;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #ff6b35;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Page Overlay */
+        .page-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #080808;
+            z-index: 200;
+            overflow-y: auto;
+            animation: slideInUp 0.5s ease;
+        }
+
+        .page-overlay.active {
+            display: block;
+        }
+
+        .page-header {
+            background: #ffffff;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .page-header h1 {
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .close-page {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-page:hover {
+            color: #ff6b35;
+        }
+
+        .page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Registration Page */
+        .registration-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            height: 800px;
+        }
+
+        .registration-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Form Selection */
+        .form-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .form-option-btn {
+            padding: 0.8rem 1.5rem;
+            background: #f0f0f0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .form-option-btn:hover {
+            border-color: #ff6b35;
+            background: #fff;
+        }
+
+        .form-option-btn.active {
+            background: #ff6b35;
+            color: white;
+            border-color: #ff6b35;
+        }
+
+        .registration-info {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .registration-info h3 {
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .registration-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Form Input Section */
+        .form-input-section {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-input-section h3 {
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group.full {
+            grid-template-columns: 1fr;
+        }
+
+        .input-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-field label {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .input-field input {
+            padding: 0.75rem;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-field input:focus {
+            outline: none;
+            border-color: #ff6b35;
+            box-shadow: 0 0 0 3px rgba(255,107,53,0.1);
+        }
+
+        .input-field input::placeholder {
+            color: #999;
+        }
+
+        .submit-form-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .submit-form-btn:hover {
+            background: #ff5a1f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255,107,53,0.3);
+        }
+
+        /* Show/Hide Form */
+        .form-input-section.hidden {
+            display: none;
+        }
+
+        .registration-container.hidden {
+            display: none;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #1a1a1a;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255,107,53,0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-title {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideOutDown {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+        }
+
+        .page-overlay.closing {
+            animation: slideOutDown 0.5s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .pricing-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.2rem;
+            }
+
+            .pricing-card:hover .pricing-features {
+                display: none;
+            }
+
+            .pricing-features {
+                display: block !important;
+            }
+
+            .price {
+                min-width: auto;
+                font-size: 1.5rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-us-image {
+                height: 250px;
+            }
+
+            .cta-button-secondary {
+                display: block;
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .registration-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .page-header {
+                padding: 1rem 1.5rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Atensi Fitness Center <span>Gym</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fitur">Fitur</a></li>
+                <li><a href="#harga">Harga</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Transformasi Tubuh Anda Bersama <span class="accent">Atensi Fitness Center</span></h1>
+            <p>Fasilitas lengkap dengan pelatih profesional untuk mencapai target fitness Anda</p>
+            <button class="cta-button" onclick="openRegistration()">Daftar Sekarang</button>
+            <button class="cta-button cta-button-secondary" onclick="openGallery()">Lihat Fasilitas</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="fitur">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Atensi Fitness?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3>Pelatih Profesional</h3>
+                    <p>Tim pelatih bersertifikat siap membimbing program latihan Anda dengan personal training</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏋️</div>
+                    <h3>Alat Modern</h3>
+                    <p>Dilengkapi dengan equipment terbaru dan terpadu untuk semua jenis latihan</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Fasilitas Aman</h3>
+                    <p>Keamanan terjamin dengan sistem CCTV</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☀️</div>
+                    <h3>Jam Operasional Panjang</h3>
+                    <p>Buka dari pukul 06:00 - 22:00 untuk kenyamanan Anda berlatih</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="harga">
+        <div class="container">
+            <h2 class="section-title">Paket Harga Terjangkau</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-info">
+                        <h3>Per Visit</h3>
+                        <p class="price-period">Per Visit</p>
+                        <ul class="pricing-features">
+                            <li>Akses ke semua fasilitas</li>
+                            <li>Gratis locker</li>
+                            <li>Akses WiFi</li>
+                            <li>Area istirahat</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="price">Rp 25.000</div>
+                        <button class="pricing-button secondary">Pilih</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Paling Populer</div>
+                    <div class="pricing-info">
+                        <h3>Membership Bulanan</h3>
+                        <p class="price-period">Per Bulan</p>
+                        <ul class="pricing-features">
+                            <li>Akses unlimited</li>
+                            <li>Akses ke semua fasilitas</li>
+                            <li>Gratis locker</li>
+                            <li>Akses WiFi</li>
+                            <li>Area Istirahat</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="price">Rp 200.000</div>
+                        <button class="pricing-button primary">Pilih</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-badge" style="background: #4CAF50;">Diskon Pelajar</div>
+                    <div class="pricing-info">
+                        <h3>Membership Pelajar</h3>
+                        <p class="price-period">Per Bulan</p>
+                        <ul class="pricing-features">
+                            <li>Akses unlimited</li>
+                            <li>Akses ke semua fasilitas</li>
+                            <li>Gratis locker</li>
+                            <li>Akses WiFi</li>
+                            <li>Area Istirahat</li>
+                            <li>Daftar hanya dengan kartu pelajar</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="price">Rp 175.000</div>
+                        <button class="pricing-button secondary">Pilih</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-info">
+                        <h3>Tamu Hotel Per Visit</h3>
+                        <p class="price-period">Per Visit</p>
+                        <ul class="pricing-features">
+                            <li>Akses ke semua fasilitas</li>
+                            <li>Gratis locker</li>
+                            <li>Akses WiFi</li>
+                            <li>Area istirahat</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="price">Rp 15.000</div>
+                        <button class="pricing-button secondary">Pilih</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-info">
+                        <h3>Trainer Per Visit</h3>
+                        <p class="price-period">Per Visit</p>
+                        <ul class="pricing-features">
+                            <li>Akses ke semua fasilitas</li>
+                            <li>Gratis locker</li>
+                            <li>Akses WiFi</li>
+                            <li>Area istirahat</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="price">Rp 50.000</div>
+                        <button class="pricing-button secondary">Pilih</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-info">
+                        <h3>Gym + Trainer Per Visit</h3>
+                        <p class="price-period">Per Visit</p>
+                        <ul class="pricing-features">
+                            <li>Akses ke semua fasilitas</li>
+                            <li>Gratis locker</li>
+                            <li>Akses WiFi</li>
+                            <li>Area istirahat</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="price">Rp 75.000</div>
+                        <button class="pricing-button secondary">Pilih</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-info">
+                        <h3>PT Per Bulan 8x</h3>
+                        <p class="price-period">Per Bulan</p>
+                        <ul class="pricing-features">
+                            <li>Akses ke semua fasilitas</li>
+                            <li>Gratis locker</li>
+                            <li>Akses WiFi</li>
+                            <li>Area istirahat</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="price">Rp 300.000</div>
+                        <button class="pricing-button secondary">Pilih</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-info">
+                        <h3>PT + Gym Per Bulan</h3>
+                        <p class="price-period">Per Bulan</p>
+                        <ul class="pricing-features">
+                            <li>Akses ke semua fasilitas</li>
+                            <li>Gratis locker</li>
+                            <li>Akses WiFi</li>
+                            <li>Area istirahat</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="price">Rp 500.000</div>
+                        <button class="pricing-button secondary">Pilih</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-content">
+                    <h2>Bergabunglah dengan Atensi Fitness Center</h2>
+                    <ul class="why-us-list">
+                        <li>Lokasi strategis</li>
+                        <li>Fasilitas bagus dan nyaman</li>
+                        <li>Staf profesional dan ramah</li>
+                        <li>Jadwal fleksibel sesuai kebutuhan</li>
+                        <li>Harga kompetitif dan terjangkau</li>
+                    </ul>
+                </div>
+                <div class="why-us-image">
+                    <img src="https://th.bing.com/th/id/OIP.6-slehmgknd1IKtS5Q4MQQAAAA?w=192&h=192&c=7&r=0&o=7&cb=defcachec2&pid=1.7&rm=3" alt="truly fitness" style="width: 400px;" height="400px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Atensi Fitness Center</h4>
+                    <p>Tempat terbaik untuk memulai perjalanan fitness Anda menuju tubuh impian.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lokasi</h4>
+                    <p><a href="https://www.google.com/maps?q=Jalan+Pramuka+No.96,+Kota+Kuningan">Jalan Pramuka No.96, Kuningan, Jawa Barat</a></p>
+                
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p><a href="tel:+6285967284746">📞 +62 859-6728-4746</a></p>
+                    <p>⏰ 06:00 - 22:00 WIB</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <p><a href="https://www.instagram.com/atensifitnesscenter">Instagram: @atensifitnesscenter</a></p>
+                    <p><a href="https://www.tiktok.com/@atensifitnesscenter">TikTok: @atensifitnesscenter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atensi Fitness Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Page Overlay -->
+    <div class="page-overlay" id="registrationPage">
+        <div class="page-header">
+            <h1>Daftar Member</h1>
+            <button class="close-page" onclick="closeRegistration()">✕</button>
+        </div>
+        <div class="page-content">
+            <div class="form-selector">
+                <button class="form-option-btn active" onclick="switchForm('form1')">Per Visit</button>
+                <button class="form-option-btn" onclick="switchForm('form2')">Per Bulan</button>
+                <button class="form-option-btn" onclick="switchForm('form3')">Pelajar Per Bulan</button>
+                <button class="form-option-btn" onclick="switchForm('form4')">Tamu Hotel Per Visit</button>
+                <button class="form-option-btn" onclick="switchForm('form5')">Trainer Per Visit</button>
+                <button class="form-option-btn" onclick="switchForm('form6')">Gym + Trainer Per Visit</button>
+                <button class="form-option-btn" onclick="switchForm('form7')">PT Per Bulan 8x</button>
+                <button class="form-option-btn" onclick="switchForm('form8')">PT + Gym Per Bulan</button>
+            </div>
+
+            <div class="registration-info">
+                <h3 id="formTitle">Daftar Per Visit</h3>
+                <p id="formDesc">Akses unlimited ke semua fasilitas gym kami</p>
+            </div>
+
+            <!-- Form Input Section -->
+            <div class="form-input-section" id="formInputSection">
+                <h3>Data Pribadi Anda</h3>
+                <form onsubmit="handleFormSubmit(event)">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="fullname">Nama *</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Masukkan nama" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Nomor HP *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor HP" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-form-btn">Lanjut ke Form Pendaftaran</button>
+                </form>
+            </div>
+
+            <!-- Google Form Section -->
+            <div class="registration-container hidden" id="registrationContainer">
+                <iframe id="formFrame" src="https://bit.iy/gmatensi" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Page Overlay -->
+    <div class="page-overlay" id="galleryPage">
+        <div class="page-header">
+            <h1>Fasilitas Kami</h1>
+            <button class="close-page" onclick="closeGallery()">✕</button>
+        </div>
+        <div class="page-content">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=500&fit=crop" alt="Area Resepsi">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Area Resepsi</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1576678927484-cc907957656c?w=500&h=500&fit=crop" alt="Area Gym">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Area Gym</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1598971457318-b345dd3f3f67?w=500&h=500&fit=crop" alt="Loker">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Loker</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=500&fit=crop" alt="Ruang Ganti Pakaian">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Ruang Ganti Pakaian</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1584622181563-430f63602d4b?w=500&h=500&fit=crop" alt="Kamar Mandi">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Kamar Mandi</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1607805187743-a2a27db54f4b?w=500&h=500&fit=crop" alt="Personal Trainer">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Personal Trainer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Registration Page Functions
+        function openRegistration() {
+            const page = document.getElementById('registrationPage');
+            page.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRegistration() {
+            const page = document.getElementById('registrationPage');
+            page.classList.add('closing');
+            setTimeout(() => {
+                page.classList.remove('active', 'closing');
+                document.body.style.overflow = 'auto';
+                
+                // Reset form ketika ditutup
+                document.getElementById('fullname').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('registrationContainer').classList.add('hidden');
+            }, 500);
+        }
+
+        // Form switching
+        const forms = {
+            form1: {
+                url: 'https://bit.iy/gmatensi',
+                title: 'Per Visit',
+                desc: 'Akses ke semua fasilitas gym kami'
+            },
+            form2: {
+                url: 'https://bit.iy/gmatensi',
+                title: 'Gym Per Bulan',
+                desc: 'Akses unlimited ke semua fasilitas gym kami'
+            },
+            form3: {
+                url: 'https://bit.iy/gmatensi',
+                title: 'Gym Pelajar Per Bulan',
+                desc: 'Khusus pelajar dengan akses unlimited ke semua fasilitas gym kami'
+            },
+            form4: {
+                url: 'https://bit.iy/gmatensi',
+                title: 'Tamu Hotel Per Visit',
+                desc: 'Akses ke semua fasilitas gym kami untuk tamu hotel'
+            },
+            form5: {
+                url: 'https://bit.iy/gmatensi',
+                title: 'Trainer Per Visit',
+                desc: 'Akses ke semua fasilitas gym kami dengan layanan trainer profesional'
+            },
+            form6: {
+                url: 'https://bit.iy/gmatensi',
+                title: 'Gym + Trainer Per Visit',
+                desc: 'Akses ke semua fasilitas gym kami dengan layanan trainer profesional'
+            },
+            form7: {
+                url: 'https://bit.iy/gmatensi',
+                title: 'PT Per Bulan 8x',
+                desc: 'Program personal training 8 kali per bulan dengan akses ke semua fasilitas gym kami'
+            },
+            form8: {
+                url: 'https://bit.iy/gmatensi',
+                title: 'PT + Gym Per Bulan',
+                desc: 'Program personal training bulanan dengan akses unlimited ke semua fasilitas gym kami'
+            }
+        };
+
+        function switchForm(formKey) {
+            const formData = forms[formKey];
+            const titleElement = document.getElementById('formTitle');
+            const descElement = document.getElementById('formDesc');
+
+            // Update title and description
+            titleElement.textContent = formData.title;
+            descElement.textContent = formData.desc;
+
+            // Store selected form
+            window.selectedForm = formData;
+
+            // Update active button
+            document.querySelectorAll('.form-option-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const fullname = document.getElementById('fullname').value;
+            const phone = document.getElementById('phone').value;
+
+            // Store data in sessionStorage
+            sessionStorage.setItem('userData', JSON.stringify({
+                name: fullname,
+                phone: phone,
+            }));
+
+            // Hide form input section and show Google Form
+            document.getElementById('formInputSection').classList.add('hidden');
+            document.getElementById('registrationContainer').classList.remove('hidden');
+
+            // Update iframe src with selected form
+            const selectedForm = window.selectedForm || forms.form1;
+            document.getElementById('formFrame').src = selectedForm.url;
+
+            // Show confirmation
+            alert(`Halo ${fullname}! Data Anda telah tersimpan. Silakan isi form pendaftaran di bawah ini.`);
+        }
+
+        // Gallery Page Functions
+        function openGallery() {
+            const page = document.getElementById('galleryPage');
+            page.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            const page = document.getElementById('galleryPage');
+            page.classList.add('closing');
+            setTimeout(() => {
+                page.classList.remove('active', 'closing');
+                document.body.style.overflow = 'auto';
+            }, 500);
+        }
+
+        // Close page when clicking outside
+        document.addEventListener('click', function(event) {
+            const registrationPage = document.getElementById('registrationPage');
+            const galleryPage = document.getElementById('galleryPage');
+
+            if (event.target === registrationPage && registrationPage.classList.contains('active')) {
+                closeRegistration();
+            }
+            if (event.target === galleryPage && galleryPage.classList.contains('active')) {
+                closeGallery();
+            }
+        });
+
+        // Close page with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const registrationPage = document.getElementById('registrationPage');
+                const galleryPage = document.getElementById('galleryPage');
+                
+                if (registrationPage.classList.contains('active')) {
+                    closeRegistration();
+                }
+                if (galleryPage.classList.contains('active')) {
+                    closeGallery();
+                }
+            }
+        });
+
+        // Smooth scrolling untuk navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Button click handlers
+        document.querySelectorAll('.pricing-button').forEach(button => {
+            button.addEventListener('click', function() {
+                openRegistration();
+            });
+        });
+    </script>
+</body>
+</html>
