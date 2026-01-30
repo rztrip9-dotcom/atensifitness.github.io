@@ -1,0 +1,813 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atensi Fitness Center - Bentuk Badanmu Sesuai Impianmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Atensi Fitness Center <span>Gym</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fitur">Fitur</a></li>
+                <li><a href="#harga">Harga</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Transformasi Tubuh Anda Bersama <span class="accent">Atensi Fitness Center</span></h1>
+            <p>Fasilitas lengkap dengan pelatih profesional untuk mencapai target fitness Anda</p>
+            <button class="cta-button" onclick="openRegistration()">Daftar Sekarang</button>
+            <button class="cta-button cta-button-secondary" onclick="openGallery()">Lihat Fasilitas</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="fitur">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Atensi Fitness?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3>Pelatih Profesional</h3>
+                    <p>Tim pelatih bersertifikat siap membimbing program latihan Anda dengan personal training</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏋️</div>
+                    <h3>Alat Modern</h3>
+                    <p>Dilengkapi dengan equipment terbaru dan terpadu untuk semua jenis latihan</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Fasilitas Aman</h3>
+                    <p>Keamanan terjamin dengan sistem CCTV</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☀️</div>
+                    <h3>Jam Operasional Panjang</h3>
+                    <p>Buka dari pukul 06:00 - 22:00 untuk kenyamanan Anda berlatih</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="harga">
+  <div class="container">
+    <h2 class="section-title">Paket Harga Terjangkau</h2>
+    <div class="pricing-grid">
+
+      <!-- Card 1 -->
+      <div class="pricing-card">
+        <div class="pricing-info">
+          <h3>Gym Per Visit</h3>
+          <p class="price-period">Per Visit</p>
+          <ul class="pricing-features">
+            <li>Akses ke semua fasilitas</li>
+            <li>Gratis locker</li>
+            <li>Akses WiFi</li>
+            <li>Area istirahat</li>
+          </ul>
+        </div>
+        <div class="price-action">
+          <div class="price">Rp 25.000</div>
+          <button class="pricing-button secondary">Pilih</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Paling Populer</div>
+        <div class="pricing-info">
+          <h3>Gym Per Bulan</h3>
+          <p class="price-period">Per Bulan</p>
+          <ul class="pricing-features">
+            <li>Akses unlimited</li>
+            <li>Akses ke semua fasilitas</li>
+            <li>Gratis locker</li>
+            <li>Akses WiFi</li>
+            <li>Area Istirahat</li>
+          </ul>
+        </div>
+        <div class="price-action">
+          <div class="price">Rp 200.000</div>
+          <button class="pricing-button primary">Pilih</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Diskon Pelajar</div>
+        <div class="pricing-info">
+          <h3>Gym Pelajar Per Bulan</h3>
+          <p class="price-period">Per Bulan</p>
+          <ul class="pricing-features">
+            <li>Akses unlimited</li>
+            <li>Akses ke semua fasilitas</li>
+            <li>Gratis locker</li>
+            <li>Akses WiFi</li>
+            <li>Area Istirahat</li>
+          </ul>
+        </div>
+        <div class="price-action">
+          <div class="price">Rp 175.000</div>
+          <button class="pricing-button primary">Pilih</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="pricing-card featured">
+        <div class="pricing-info">
+          <h3>Gym Tamu Hotel Per Visit</h3>
+          <p class="price-period">Per Visit</p>
+          <ul class="pricing-features">
+            <li>Akses ke semua fasilitas</li>
+            <li>Gratis locker</li>
+            <li>Akses WiFi</li>
+            <li>Area Istirahat</li>
+          </ul>
+        </div>
+        <div class="price-action">
+          <div class="price">Rp 15.000</div>
+          <button class="pricing-button primary">Pilih</button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="pricing-card featured">
+        <div class="pricing-info">
+          <h3>Personal Trainer Per Visit</h3>
+          <p class="price-period">Per Visit</p>
+          <ul class="pricing-features">
+            <li>Program Latihan Yang Disesuaikan</li>
+            <li>Teknik Yang Benar Untuk Mencegah Cidera</li>
+            <li>Motivasi Dan Akuntabilitas</li>
+            <li>Efisiensi Waktu</li>
+          </ul>
+        </div>
+        <div class="price-action">
+          <div class="price">Rp 50.000</div>
+          <button class="pricing-button primary">Pilih</button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="pricing-card featured">
+        <div class="pricing-info">
+          <h3>Gym + Personal Trainer Per Visit</h3>
+          <p class="price-period">Per Visit</p>
+          <ul class="pricing-features">
+            <li>Program Latihan Yang Disesuaikan</li>
+            <li>Teknik Yang Benar Untuk Mencegah Cidera</li>
+            <li>Motivasi Dan Akuntabilitas</li>
+            <li>Efisiensi Waktu</li>
+          </ul>
+        </div>
+        <div class="price-action">
+          <div class="price">Rp 75.000</div>
+          <button class="pricing-button primary">Pilih</button>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="pricing-card featured">
+        <div class="pricing-info">
+          <h3>Personal Trainer Per Bulan</h3>
+          <p class="price-period">Per Bulan</p>
+          <ul class="pricing-features">
+           <li>Program Latihan Yang Disesuaikan</li>
+            <li>Teknik Yang Benar Untuk Mencegah Cidera</li>
+            <li>Motivasi Dan Akuntabilitas</li>
+            <li>Efisiensi Waktu</li>
+          </ul>
+        </div>
+        <div class="price-action">
+          <div class="price">Rp 300.000</div>
+          <button class="pricing-button primary">Pilih</button>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="pricing-card featured">
+        <div class="pricing-info">
+          <h3>Gym + Personal Trainer Per Bulan</h3>
+          <p class="price-period">Per Bulan</p>
+          <ul class="pricing-features">
+            <li>Program Latihan Yang Disesuaikan</li>
+            <li>Teknik Yang Benar Untuk Mencegah Cidera</li>
+            <li>Motivasi Dan Akuntabilitas</li>
+            <li>Efisiensi Waktu</li>
+          </ul>
+        </div>
+        <div class="price-action">
+          <div class="price">Rp 500.000</div>
+          <button class="pricing-button primary">Pilih</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-content">
+                    <h2>Bergabunglah dengan Atensi Fitness Center</h2>
+                    <ul class="why-us-list">
+                        <li>Lokasi strategis</li>
+                        <li>Fasilitas bagus dan nyaman</li>
+                        <li>Staf profesional dan ramah</li>
+                        <li>Jadwal fleksibel sesuai kebutuhan</li>
+                        <li>Harga kompetitif dan terjangkau</li>
+                    </ul>
+                </div>
+                <div class="why-us-image">
+                    <img src="data:image/webp;base64,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" alt="truly fitness" style="width: 300px;" height="300px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Atensi Fitness Center</h4>
+                    <p>Tempat terbaik untuk memulai perjalanan fitness Anda menuju tubuh impian.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lokasi</h4>
+                    <p><a href="https://www.google.com/maps?q=Jalan+Pramuka+No.96,+Kota+Kuningan">Jalan Pramuka No.96, Kuningan, Jawa Barat</a></p>
+                
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p><a href="tel:+6285967284746">📞 +62 859-6728-4746</a></p>
+                    <p>⏰ 06:00 - 22:00 WIB</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <p><a href="https://www.instagram.com/atensifitnesscenter">Instagram: @atensifitnesscenter</a></p>
+                    <p><a href="https://www.tiktok.com/@atensifitnesscenter">TikTok: @atensifitnesscenter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atensi Fitness Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Page Overlay (Form Input Only) -->
+    <div class="page-overlay" id="registrationPage">
+        <div class="page-header">
+            <h1>Daftar Member</h1>
+            <button class="close-page" onclick="closeRegistration()">✕</button>
+        </div>
+        <div class="page-content">
+            <div class="form-selector">
+                <button class="form-option-btn active" onclick="switchForm('form1')">Per Visit</button>
+                <button class="form-option-btn" onclick="switchForm('form2')">Per Bulan</button>
+                <button class="form-option-btn" onclick="switchForm('form3')">Pelajar Per Bulan</button>
+                <button class="form-option-btn" onclick="switchForm('form4')">Tamu Hotel Per Visit</button>
+                <button class="form-option-btn" onclick="switchForm('form5')">Trainer Per Visit</button>
+                <button class="form-option-btn" onclick="switchForm('form6')">Gym + Trainer Per Visit</button>
+                <button class="form-option-btn" onclick="switchForm('form7')">PT Per Bulan 8x</button>
+                <button class="form-option-btn" onclick="switchForm('form8')">PT + Gym Per Bulan</button>
+            </div>
+
+            <div class="registration-info">
+                <h3 id="formTitle">Daftar Per Visit</h3>
+                <p id="formDesc">Akses ke semua fasilitas gym kami</p>
+                <div class="registration-price">
+                    <span class="price-label">Harga:</span>
+                    <span class="price-value" id="formPrice">Rp 25.000</span>
+                </div>
+            </div>
+
+            <!-- Form Input Section -->
+            <div class="form-input-section" id="formInputSection">
+                <h3>Data Pribadi Anda</h3>
+                <form onsubmit="handleFormSubmit(event)" id="dataForm">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="fullname">Nama Lengkap <span style="color: #ff6b35; font-weight: bold;">*</span></label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Masukkan nama lengkap" autocomplete="name">
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Nomor Telepon <span style="color: #ff6b35; font-weight: bold;">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon (08...)" autocomplete="tel" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="email">Email <span style="color: #999; font-size: 0.85rem;">(Opsional)</span></label>
+                            <input type="email" id="email" name="email" placeholder="Masukkan email" autocomplete="email">
+                        </div>
+                        <div class="input-field">
+                            <label for="address">Alamat <span style="color: #999; font-size: 0.85rem;">(Opsional)</span></label>
+                            <input type="text" id="address" name="address" placeholder="Masukkan alamat" autocomplete="street-address">
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-form-btn">Lanjut ke Pembayaran</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Page Overlay (Payment Method Selection) -->
+    <div class="page-overlay" id="paymentPage">
+        <div class="page-header">
+            <h1>Pilih Metode Pembayaran</h1>
+            <button class="close-page" onclick="closePaymentPage()">✕</button>
+        </div>
+        <div class="page-content">
+            <div class="registration-info">
+                <h3 id="paymentFormTitle">Per Visit</h3>
+                <p id="paymentFormDesc">Akses ke semua fasilitas gym kami</p>
+                <div class="registration-price">
+                    <span class="price-label">Harga:</span>
+                    <span class="price-value" id="paymentFormPrice">Rp 25.000</span>
+                </div>
+            </div>
+            
+            <!-- Payment Method Selection -->
+            <div class="payment-section" id="paymentSelectionSection">
+                <h3>Pilih Metode Pembayaran</h3>
+                <div class="payment-methods">
+                    <div class="payment-method" onclick="selectPaymentMethod('qr')">
+                        <input type="radio" id="paymentQR" name="payment" value="qr" onchange="selectPaymentMethod('qr')">
+                        <label for="paymentQR" class="payment-label">
+                            <span class="payment-icon">📱</span>
+                            <span>Transfer QR</span>
+                        </label>
+                    </div>
+                    <div class="payment-method" onclick="selectPaymentMethod('cash')">
+                        <input type="radio" id="paymentCash" name="payment" value="cash" onchange="selectPaymentMethod('cash')">
+                        <label for="paymentCash" class="payment-label">
+                            <span class="payment-icon">💵</span>
+                            <span>Pembayaran Tunai</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Methods Side by Side -->
+            <div class="payment-methods-container hidden" id="paymentMethodsContainer">
+                <!-- QR Code Payment Section -->
+                <div class="payment-method-box qr-payment-section" id="qrPaymentSection">
+                    <h3>📱 Transfer QR</h3>
+                    <div class="payment-details">
+                        <div class="qr-payment-summary compact">
+                            <div class="summary-row">
+                                <span class="summary-label">Paket:</span>
+                                <span class="summary-value" id="qrPackageName">Per Visit</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Total:</span>
+                                <span class="summary-value price" id="qrPaymentAmount">Rp 25.000</span>
+                            </div>
+                        </div>
+                        <div class="qr-info">
+                            <p><strong>Nama Rekening:</strong> Atensi Fitness Center</p>
+                            <p><strong>Bank/E-Wallet:</strong> BCA / Dana / GCash</p>
+                            <p><strong>No. Rekening:</strong> 1234567890</p>
+                            <p class="info-note">Transfer sesuai nominal & tunjukkan bukti ke kasir</p>
+                        </div>
+                    </div>
+                    <div class="qr-container-single">
+                        <img id="qrCodeImage" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Atensi%20Fitness%20Center%20-%20Per%20Visit%20-%20Rp%2025.000" alt="QR Code Pembayaran" class="qr-code">
+                    </div>
+                    <button class="submit-form-btn" onclick="completePaymentQR()">Sudah Transfer</button>
+                </div>
+
+                <!-- Cash Payment Section -->
+                <div class="payment-method-box cash-payment-section" id="cashPaymentSection">
+                    <h3>💵 Pembayaran Tunai</h3>
+                    <div class="payment-details">
+                        <div class="cash-payment-summary compact">
+                            <div class="summary-row">
+                                <span class="summary-label">Paket:</span>
+                                <span class="summary-value" id="cashPackageName">Per Visit</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Total:</span>
+                                <span class="summary-value price" id="cashPaymentAmount">Rp 25.000</span>
+                            </div>
+                        </div>
+                        <div class="cash-info">
+                            <h4>Instruksi Pembayaran</h4>
+                            <ol>
+                                <li>Datang ke lokasi gym</li>
+                                <li>Tunjukkan data isian</li>
+                                <li>Bayar: <strong id="cashAmount">Rp 25.000</strong></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="location-compact-box">
+                        <h4>Lokasi</h4>
+                        <p><strong>Jl. Pramuka No.96</strong></p>
+                        <p>Kuningan, Jawa Barat</p>
+                        <p style="margin-top: 0.7rem; border-top: 1px solid #ddd; padding-top: 0.7rem;">
+                            <strong>Jam:</strong> 06:00 - 22:00 WIB<br>
+                            <strong>Telp:</strong> <a href="tel:+6285967284746">+62 859-6728-4746</a>
+                        </p>
+                    </div>
+                    <button class="submit-form-btn" onclick="completePaymentCash()">Konfirmasi Tunai</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Page Overlay -->
+    <div class="page-overlay" id="galleryPage">
+        <div class="page-header">
+            <h1>Fasilitas Kami</h1>
+            <button class="close-page" onclick="closeGallery()">✕</button>
+        </div>
+        <div class="page-content">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=500&fit=crop" alt="Area Resepsi">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Area Resepsi</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1576678927484-cc907957656c?w=500&h=500&fit=crop" alt="Area Gym">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Area Gym</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1598971457318-b345dd3f3f67?w=500&h=500&fit=crop" alt="Loker">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Loker</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=500&fit=crop" alt="Ruang Ganti Pakaian">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Ruang Ganti Pakaian</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1584622181563-430f63602d4b?w=500&h=500&fit=crop" alt="Kamar Mandi">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Kamar Mandi</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1607805187743-a2a27db54f4b?w=500&h=500&fit=crop" alt="Personal Trainer">
+                    <div class="gallery-overlay">
+                        <p class="gallery-title">Personal Trainer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Registration Page Functions
+        function openRegistration() {
+            const page = document.getElementById('registrationPage');
+            page.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRegistration() {
+            const page = document.getElementById('registrationPage');
+            page.classList.add('closing');
+            setTimeout(() => {
+                page.classList.remove('active', 'closing');
+                document.body.style.overflow = 'auto';
+                
+                // Reset form ketika ditutup
+                document.getElementById('fullname').value = '';
+                document.getElementById('phone').value = '';
+            }, 500);
+        }
+
+        function openPaymentPage() {
+            const page = document.getElementById('paymentPage');
+            page.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Update payment page info dengan form yang dipilih
+            const formData = window.selectedForm || forms.form1;
+            document.getElementById('paymentFormTitle').textContent = formData.title;
+            document.getElementById('paymentFormDesc').textContent = formData.desc;
+            document.getElementById('paymentFormPrice').textContent = formData.price;
+        }
+
+        function closePaymentPage() {
+            const page = document.getElementById('paymentPage');
+            page.classList.add('closing');
+            setTimeout(() => {
+                page.classList.remove('active', 'closing');
+                document.body.style.overflow = 'auto';
+            }, 500);
+        }
+
+        // Form switching
+        const forms = {
+            form1: {
+                title: 'Per Visit',
+                desc: 'Akses ke semua fasilitas gym kami',
+                price: 'Rp 25.000'
+            },
+            form2: {
+                title: 'Membership Bulanan',
+                desc: 'Akses unlimited ke semua fasilitas gym kami',
+                price: 'Rp 200.000'
+            },
+            form3: {
+                title: 'Membership Pelajar',
+                desc: 'Khusus pelajar dengan akses unlimited ke semua fasilitas gym kami',
+                price: 'Rp 175.000'
+            },
+            form4: {
+                title: 'Tamu Hotel Per Visit',
+                desc: 'Akses ke semua fasilitas gym kami untuk tamu hotel',
+                price: 'Rp 15.000'
+            },
+            form5: {
+                title: 'Trainer Per Visit',
+                desc: 'Akses ke semua fasilitas gym kami dengan layanan trainer profesional',
+                price: 'Rp 50.000'
+            },
+            form6: {
+                title: 'Gym + Trainer Per Visit',
+                desc: 'Akses ke semua fasilitas gym kami dengan layanan trainer profesional',
+                price: 'Rp 75.000'
+            },
+            form7: {
+                title: 'PT Per Bulan 8x',
+                desc: 'Program personal training 8 kali per bulan dengan akses ke semua fasilitas gym kami',
+                price: 'Rp 300.000'
+            },
+            form8: {
+                title: 'PT + Gym Per Bulan',
+                desc: 'Program personal training bulanan dengan akses unlimited ke semua fasilitas gym kami',
+                price: 'Rp 500.000'
+            }
+        };
+
+        function switchForm(formKey) {
+            const formData = forms[formKey];
+            const titleElement = document.getElementById('formTitle');
+            const descElement = document.getElementById('formDesc');
+            const priceElement = document.getElementById('formPrice');
+
+            // Update title, description, and price
+            titleElement.textContent = 'Daftar ' + formData.title;
+            descElement.textContent = formData.desc;
+            priceElement.textContent = formData.price;
+
+            // Store selected form
+            window.selectedForm = formData;
+
+            // Update active button
+            document.querySelectorAll('.form-option-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const fullname = document.getElementById('fullname').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+
+            // Validasi nama lengkap wajib diisi
+            if (!fullname || fullname === '') {
+                alert('⚠️ Nama Lengkap WAJIB diisi!\n\nSilakan masukkan nama lengkap Anda untuk melanjutkan pendaftaran.');
+                document.getElementById('fullname').focus();
+                return;
+            }
+
+            // Validasi nomor telepon wajib diisi
+            if (!phone || phone === '') {
+                alert('⚠️ Nomor Telepon WAJIB diisi!\n\nSilakan masukkan nomor telepon Anda untuk melanjutkan pendaftaran.');
+                document.getElementById('phone').focus();
+                return;
+            }
+
+            // Validasi format nomor telepon (10-13 digit)
+            if (phone.length < 10 || phone.length > 13) {
+                alert('⚠️ Nomor Telepon Tidak Valid!\n\nNomor telepon harus antara 10-13 digit.\nContoh: 08123456789');
+                document.getElementById('phone').focus();
+                return;
+            }
+
+            // Validasi nomor telepon hanya berisi angka
+            if (!/^[0-9]+$/.test(phone)) {
+                alert('⚠️ Nomor Telepon Tidak Valid!\n\nNomor telepon hanya boleh berisi angka saja.\nContoh: 08123456789');
+                document.getElementById('phone').focus();
+                return;
+            }
+
+            // Store data in sessionStorage
+            sessionStorage.setItem('userData', JSON.stringify({
+                name: fullname,
+                phone: phone,
+                email: email,
+                address: address,
+            }));
+
+            // Tutup registration page dan buka payment page
+            const registrationPage = document.getElementById('registrationPage');
+            registrationPage.classList.add('closing');
+            setTimeout(() => {
+                registrationPage.classList.remove('active', 'closing');
+                document.body.style.overflow = 'auto';
+                
+                // Buka payment page setelah registration page tertutup
+                setTimeout(() => {
+                    openPaymentPage();
+                }, 300);
+            }, 500);
+        }
+
+        // Payment Method Functions
+        function selectPaymentMethod(method) {
+            // Update radio buttons
+            document.getElementById('paymentQR').checked = (method === 'qr');
+            document.getElementById('paymentCash').checked = (method === 'cash');
+            
+            // Show payment methods container
+            document.getElementById('paymentSection').classList.add('hidden');
+            document.getElementById('paymentMethodsContainer').classList.remove('hidden');
+            
+            // Update QR Code
+            const formData = window.selectedForm || forms.form1;
+            const packageName = formData.title;
+            const priceAmount = formData.price;
+            
+            // Update QR summary and code
+            document.getElementById('qrPackageName').textContent = packageName;
+            document.getElementById('qrPaymentAmount').textContent = priceAmount;
+            const qrData = `Atensi Fitness Center - ${packageName} - ${priceAmount}`;
+            const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
+            document.getElementById('qrCodeImage').src = qrCodeUrl;
+            
+            // Update Cash info
+            document.getElementById('cashPackageName').textContent = packageName;
+            document.getElementById('cashPaymentAmount').textContent = priceAmount;
+            document.getElementById('cashAmount').textContent = priceAmount;
+            
+            // Highlight selected method
+            const qrBox = document.getElementById('qrPaymentSection');
+            const cashBox = document.getElementById('cashPaymentSection');
+            
+            if (method === 'qr') {
+                qrBox.classList.add('selected');
+                cashBox.classList.remove('selected');
+            } else {
+                cashBox.classList.add('selected');
+                qrBox.classList.remove('selected');
+            }
+        }
+
+        function showQRCode() {
+            selectPaymentMethod('qr');
+        }
+
+        function showCashInfo() {
+            selectPaymentMethod('cash');
+        }
+
+        function completePaymentQR() {
+            const userData = JSON.parse(sessionStorage.getItem('userData'));
+            alert(`Terima kasih ${userData.name}!\n\nPembayaran via QR telah dikonfirmasi.\nMohon tunggu 1-2 menit untuk verifikasi transfer.\n\nNomor Kontak: ${userData.phone}`);
+            
+            // Reset, tutup payment page, dan kembali ke home
+            setTimeout(() => {
+                resetRegistrationForm();
+                closePaymentPage();
+                
+                // Scroll ke home setelah menutup payment page
+                setTimeout(() => {
+                    const homeSection = document.getElementById('home');
+                    homeSection.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }, 1000);
+        }
+
+        function completePaymentCash() {
+            const userData = JSON.parse(sessionStorage.getItem('userData'));
+            alert(`Terima kasih ${userData.name}!\n\nSilakan datang ke lokasi gym kami dengan membawa kartu identitas.\nBukti registrasi akan dikirim ke nomor ${userData.phone}\n\nJam Operasional: 06:00 - 22:00 WIB`);
+            
+            // Reset, tutup payment page, dan kembali ke home
+            setTimeout(() => {
+                resetRegistrationForm();
+                closePaymentPage();
+                
+                // Scroll ke home setelah menutup payment page
+                setTimeout(() => {
+                    const homeSection = document.getElementById('home');
+                    homeSection.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }, 1000);
+        }
+
+        function resetRegistrationForm() {
+            document.getElementById('fullname').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('address').value = '';
+            
+            // Reset payment radio
+            document.getElementById('paymentQR').checked = false;
+            document.getElementById('paymentCash').checked = false;
+            
+            // Reset payment selection containers
+            document.getElementById('paymentSelectionSection').classList.remove('hidden');
+            document.getElementById('paymentMethodsContainer').classList.add('hidden');
+        }
+
+        // Gallery Page Functions
+        function openGallery() {
+            const page = document.getElementById('galleryPage');
+            page.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            const page = document.getElementById('galleryPage');
+            page.classList.add('closing');
+            setTimeout(() => {
+                page.classList.remove('active', 'closing');
+                document.body.style.overflow = 'auto';
+            }, 500);
+        }
+
+        // Close page when clicking outside
+        document.addEventListener('click', function(event) {
+            const registrationPage = document.getElementById('registrationPage');
+            const paymentPage = document.getElementById('paymentPage');
+            const galleryPage = document.getElementById('galleryPage');
+
+            if (event.target === registrationPage && registrationPage.classList.contains('active')) {
+                closeRegistration();
+            }
+            if (event.target === paymentPage && paymentPage.classList.contains('active')) {
+                closePaymentPage();
+            }
+            if (event.target === galleryPage && galleryPage.classList.contains('active')) {
+                closeGallery();
+            }
+        });
+
+        // Close page with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const registrationPage = document.getElementById('registrationPage');
+                const paymentPage = document.getElementById('paymentPage');
+                const galleryPage = document.getElementById('galleryPage');
+                
+                if (registrationPage.classList.contains('active')) {
+                    closeRegistration();
+                }
+                if (paymentPage.classList.contains('active')) {
+                    closePaymentPage();
+                }
+                if (galleryPage.classList.contains('active')) {
+                    closeGallery();
+                }
+            }
+        });
+
+        // Smooth scrolling untuk navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Button click handlers
+        document.querySelectorAll('.pricing-button').forEach(button => {
+            button.addEventListener('click', function() {
+                openRegistration();
+            });
+        });
+    </script>
+</body>
+</html>
